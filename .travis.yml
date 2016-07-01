@@ -73,3 +73,10 @@ after_success:
   - docker build -t $MONGO_DB:$COMMIT ./mongodb
   - docker tag $MONGO_DB:$COMMIT $MONGO_DB:$TAG
   - docker push $MONGO_DB
+
+  - "curl -u \"605279EE1B899C8F3CED:iCLCKjh1Fak8jZJAzxKhtUge4xfmSF8GeCa34iYj\" \
+-X POST \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-d '{  \"imageUuid\": $CONFIG,\"networkMode\":\"managed\", \"privileged\":false, \"publishAllPorts\":false, \"readOnly\":false, \"startOnCreate\":true, \"stdinOpen\":false, \"tty\":false }' \
+'https://rancher.mars.haw-hamburg.de/v1/launchconfigs'"
