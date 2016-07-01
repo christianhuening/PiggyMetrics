@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -u "605279EE1B899C8F3CED:iCLCKjh1Fak8jZJAzxKhtUge4xfmSF8GeCa34iYj" \
+curl -u "$2:$3" \
 -X POST \
 -H 'Accept: application/json' \
 -H 'Content-Type: application/json' \
