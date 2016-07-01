@@ -73,7 +73,8 @@ after_success:
   - docker build -t $MONGO_DB:$COMMIT ./mongodb
   - docker tag $MONGO_DB:$COMMIT $MONGO_DB:$TAG
   - docker push $MONGO_DB
-
+  
+  # Deploy to HAW Rancher
   - "curl -u \"605279EE1B899C8F3CED:iCLCKjh1Fak8jZJAzxKhtUge4xfmSF8GeCa34iYj\" \
 -X POST \
 -H 'Accept: application/json' \
