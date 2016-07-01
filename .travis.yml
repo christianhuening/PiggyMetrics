@@ -15,7 +15,7 @@ env:
     - "CONFIG_SERVICE=sqshq/piggymetrics-config"
 
 after_success:
-  #- bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
 
 
